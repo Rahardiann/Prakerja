@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import loginImage from "../assets/logo.png";
+import loginImage from "../../assets/logo.png";
+
+
 
 export default function LoginForm() {
   const [user, setUser] = useState({ username: "", password: "" });

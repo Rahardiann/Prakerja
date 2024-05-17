@@ -10,10 +10,11 @@ import {
   FaChevronDown,
   FaChevronUp,
   FaAddressBook,
+  FaUser,
 } from "react-icons/fa";
 import Logosidebar from "../../assets/logo.png"; // Assuming logo.png is directly in the public directory
 
-import { FaPerson } from "react-icons/fa6";
+import { FaPerson, FaUserPen } from "react-icons/fa6";
 
 const Sidebar = () => {
   const [minimized, setMinimized] = useState(window.innerWidth <= 768);
@@ -66,77 +67,52 @@ const Sidebar = () => {
         </li>
         <li className="my-10">
           <Link
-            to="/barangjadi"
+            to="/data"
             className={`flex items-center text-gray-400 text-base sidebar-item ${
               minimized ? "pl-2" : "pl-4"
             } hover:text-gray-400`}
             onClick={() => setMinimized(window.innerWidth <= 768)}
           >
-            <FaPerson className={`ml-2 ${minimized ? "ml-3" : "mr-4"}`} />{" "}
-            {!minimized && <span>Patient</span>}
+            <FaBox className={`ml-2 ${minimized ? "ml-3" : "mr-4"}`} />{" "}
+            {!minimized && <span>Data</span>}
           </Link>
         </li>
         <li className="my-10">
           <Link
-            to="/barangmentah"
+            to="/admin"
             className={`flex items-center text-gray-400 text-base sidebar-item ${
               minimized ? "pl-2" : "pl-4"
             } hover:text-gray-400`}
             onClick={() => setMinimized(window.innerWidth <= 768)}
           >
             <FaAddressBook className={`ml-2 ${minimized ? "ml-3" : "mr-4"}`} />{" "}
-            {!minimized && <span>Booking</span>}
+            {!minimized && <span>Admin</span>}
           </Link>
         </li>
         <li className="my-10">
-          <div className="relative">
-            <button
-              className={`flex items-center text-gray-400 text-base sidebar-item ${
-                minimized ? "pl-2" : "pl-4"
-              } hover:text-gray-400`}
-              onClick={toggleMaster}
-            >
-              <FaBox className={`ml-2 ${minimized ? "ml-3" : "mr-4"}`} />
-              {!minimized && <span>Dentist & Promo</span>}
-              <span className="absolute right-0 top-0 bottom-0 flex items-center pr-4">
-                {masterOpen ? <FaChevronUp /> : <FaChevronDown />}
-              </span>
-            </button>
-            <ul
-              className={`absolute left-full top-0 mt-1 ml-4 bg-gray-200 shadow-lg rounded-md ${
-                masterOpen ? "block" : "hidden"
-              }`}
-            >
-              <li>
-                <Link
-                  to="/Master/MasterBarangjadi"
-                  className="block px-4 py-4 text-sm text-gray-400 hover:bg-gray-100"
-                >
-                  Dentist
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/Master/MasterBarangmentah"
-                  className="block px-4 py-4 text-sm text-gray-400 hover:bg-gray-100"
-                >
-                  Promo
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li className="my-10">
           <Link
-            to="/riwayat"
+            to="/koordinator"
             className={`flex items-center text-gray-400 text-base sidebar-item ${
               minimized ? "pl-2" : "pl-4"
             } hover:text-gray-400`}
             onClick={() => setMinimized(window.innerWidth <= 768)}
           >
-            <FaHistory className={`ml-2 ${minimized ? "ml-3" : "mr-4"}`} />{" "}
-            {!minimized && <span>Jadwal</span>}
+            <FaUserPen className={`ml-2 ${minimized ? "ml-3" : "mr-4"}`} />{" "}
+            {!minimized && <span>Koordinator</span>}
+          </Link>
+        </li>
+        
+
+        <li className="my-10">
+          <Link
+            to="/user"
+            className={`flex items-center text-gray-400 text-base sidebar-item ${
+              minimized ? "pl-2" : "pl-4"
+            } hover:text-gray-400`}
+            onClick={() => setMinimized(window.innerWidth <= 768)}
+          >
+            <FaUser className={`ml-2 ${minimized ? "ml-3" : "mr-4"}`} />{" "}
+            {!minimized && <span>User</span>}
           </Link>
         </li>
         <li className="my-10">

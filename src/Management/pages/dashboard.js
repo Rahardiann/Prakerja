@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../components/sidebar";
 import Navbar from "../components/navbar";
-import { FaPhone, FaUser, FaHouseUser, FaUserEdit } from "react-icons/fa";
+import { FaPhone, FaUser, FaHouseUser, FaUserEdit, FaAddressBook } from "react-icons/fa";
 import { FaUserPen } from "react-icons/fa6";
 import {
   BarChart,
@@ -66,7 +66,6 @@ const Dashboard = () => {
       <Sidebar />
 
       <div className="flex-1 overflow-y-auto">
-      
         <Navbar />
 
         <div className="bg-custom-grey p-4 md:p-8 lg:p-12 xl:p-16 rounded ">
@@ -99,7 +98,7 @@ const Dashboard = () => {
 
           <div className="bg-white shadow-lg w-64 h-36 rounded-lg p-6 flex flex-row items-center justify-center mr-8 mb-8">
             <div className="flex items-center justify-center h-14 w-14 rounded-full bg-yellow-500 mr-4 overflow-hidden">
-              <FaUser className="text-white" />
+              <FaAddressBook className="text-white" />
             </div>
             <div>
               <h1 className="text-lg font-semibold text-gray-500 mb-1">
@@ -123,7 +122,7 @@ const Dashboard = () => {
 
           <div className="bg-white shadow-lg w-64 h-36 rounded-lg p-6 flex flex-row items-center justify-center mr-8 mb-8">
             <div className="flex items-center justify-center h-14 w-14 rounded-full bg-green-500 mr-4 overflow-hidden">
-              <FaHouseUser className="text-white" />
+              <FaUser className="text-white" />
             </div>
             <div>
               <h1 className="text-lg font-semibold text-gray-500 mb-1">
